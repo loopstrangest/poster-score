@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter Poster Score",
+  "description": "View the score of a Twitter user based on account age, followers, and number of tweets.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "exclude_matches": [
+        "https://twitter.com/home",
+        "https://twitter.com/explore",
+        "https://twitter.com/notifications",
+        "https://twitter.com/messages",
+        "https://twitter.com/*/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "128.png",
+      "48": "128.png",
+      "128": "128.png"
+    }
+  },
+  "icons": {
+    "16": "128.png",
+    "48": "128.png",
+    "128": "128.png"
+  }
+}
